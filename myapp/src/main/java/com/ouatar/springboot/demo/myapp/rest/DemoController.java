@@ -14,10 +14,9 @@ public class DemoController {
 
 
     @Autowired
-    public  DemoController( @Qualifier("tennisCoach") Coach newCoach, @Qualifier("tennisCoach") Coach newanotherCoach){
+    public  DemoController( @Qualifier("aquatic") Coach newCoach){
         System.out.println("In constructor "  + getClass().getSimpleName());
         this.mycoach = newCoach;
-        this.anotherCoach = newanotherCoach;
     }
 
     @GetMapping("/daillyworkout")
