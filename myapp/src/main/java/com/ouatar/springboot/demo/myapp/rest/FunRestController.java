@@ -8,8 +8,21 @@ public class FunRestController {
     // expose "/" that return "Hello world"
     @GetMapping("/")
     public String sayHello(){
-        return "Hello World";
+        return "Hello World ! ";
     }
 
+    // expose a new enddpoint for "workout'
 
+    @GetMapping("/workout")
+    public String getDailyWorkout(){
+        return  "Run a hard 5k! ";
+    }
+
+    // expose a new endpoint for "fortune "
+
+    @GetMapping("/fortune")
+
+    public String getDailyFortune() {
+        return " Totaday is your lucky day !";
+    }
 }
