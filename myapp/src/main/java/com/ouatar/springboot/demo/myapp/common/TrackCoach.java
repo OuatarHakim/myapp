@@ -1,19 +1,18 @@
 package com.ouatar.springboot.demo.myapp.common;
 
-import com.ouatar.springboot.demo.myapp.common.Coach;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CricketCoach implements Coach {
+@Lazy
+public class TrackCoach implements Coach{
 
-    public CricketCoach(){
+    public TrackCoach(){
         System.out.println("In constructor "  + getClass().getSimpleName());
     }
     @Override
     public String getDailyWorkout() {
-        return "Practice fast bowling for 15 minuts ";
+        return "Im a tennis coach";
     }
-
-
 }
